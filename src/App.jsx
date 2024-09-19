@@ -38,8 +38,7 @@ function App() {
       setIsLoading(true);
       const data = await fetchQuery(searchQuery, page);
       setPictures(prev=>[...prev, ...data.results]);
-      setTotalPictures(data.total)
-      console.log(data.results);
+      setTotalPictures(data.total);
     } catch {
       setIsError(true)
       notifyError();
